@@ -8,10 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 //@RestController
 @Controller
 public class HomeController {
+	
+	private static final String viewCommonPath = "home.";
 
     @RequestMapping("/index")
     public String foo() {
-    	return "Hello Spring Boot by Maven";
+    	return viewCommonPath + "index";
+    }
+    
+    @RequestMapping("/help")
+    public String boo() {
+    	return viewCommonPath + "help";
     }
 
 }

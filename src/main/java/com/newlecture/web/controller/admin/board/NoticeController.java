@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/admin/board/notice/")
 public class NoticeController {
 	
-	private static final String viewCommonPath = "/admin/board/notice/";
+	private static final String viewCommonPath = "admin.board.notice.";
 	
 	@RequestMapping("list")
 	public String list(Model model) {
