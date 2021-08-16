@@ -22,7 +22,11 @@ public class NoticeController {
 	@RequestMapping("list")
 	public String list(Model model) {
 		
-		List<NoticeView> list = service.getList();
+		int page = 1;
+		String field = "title";
+		String query = "";
+		
+		List<NoticeView> list = service.getList(page, field, query);
 		
 		// /customer/notice/list.jsp 경로가 우연히 같으면 생략해도 된다
 		model.addAttribute("list", list);
