@@ -17,7 +17,7 @@ public interface NoticeDao {
 		@Result(property = "regdate", column = "reg_date"),
 		@Result(property = "memberId", column = "member_id")
 	})
-	List<NoticeView> getViewList(int offset, int size, String field, String query);
+	List<NoticeView> getViewList(int offset, int size, String field, String query, boolean pub);
 	NoticeView getView(int id);
 	int getCount(String field, String query);
 	Notice getNext(int id);
